@@ -256,6 +256,76 @@ data class ColourFamily(
     val onColourContainer: Color
 )
 
+
+
+
+
+val lapisLazuliFamilyLight = ColourFamily(
+    lapisLazuliLight,
+    onLapisLazuliLight,
+    lapisLazuliContainerLight,
+    onLapisLazuliContainerLight
+)
+val lapisLazuliFamilyDark = ColourFamily(
+    lapisLazuliDark,
+    onLapisLazuliDark,
+    lapisLazuliContainerDark,
+    onLapisLazuliContainerDark
+)
+
+val tigersEyeFamilyLight = ColourFamily(
+    tigersEyeLight,
+    onTigersEyeLight,
+    tigersEyeContainerLight,
+    onTigersEyeContainerLight
+)
+val tigersEyeFamilyDark = ColourFamily(
+    tigersEyeDark,
+    onTigersEyeDark,
+    tigersEyeContainerDark,
+    onTigersEyeContainerDark
+)
+
+val amethystFamilyLight = ColourFamily(
+    amethystLight,
+    onAmethystLight,
+    amethystContainerLight,
+    onAmethystContainerLight
+)
+val amethystFamilyDark = ColourFamily(
+    amethystDark,
+    onAmethystDark,
+    amethystContainerDark,
+    onAmethystContainerDark
+)
+
+val jasperFamilyLight = ColourFamily(
+    jasperLight,
+    onJasperLight,
+    jasperContainerLight,
+    onJasperContainerLight
+)
+val jasperFamilyDark = ColourFamily(
+    jasperDark,
+    onJasperDark,
+    jasperContainerDark,
+    onJasperContainerDark
+)
+
+val jadeFamilyLight = ColourFamily(
+    jadeLight,
+    onJadeLight,
+    jadeContainerLight,
+    onJadeContainerLight
+)
+val jadeFamilyDark = ColourFamily(
+    jadeDark,
+    onJadeDark,
+    jadeContainerDark,
+    onJadeContainerDark
+)
+
+
 val unspecified_scheme = ColourFamily(
     Color.Unspecified, Color.Unspecified, Color.Unspecified, Color.Unspecified
 )
