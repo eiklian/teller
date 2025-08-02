@@ -15,6 +15,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.elianan.teller.models.Arcat
 import com.elianan.teller.ui.theme.ColourFamily
 import com.elianan.teller.ui.theme.Purple40
+import com.elianan.teller.ui.theme.TellerTheme
 import com.elianan.teller.ui.theme.Typography
 
 @Composable
@@ -44,7 +46,8 @@ fun GemIconButton(
             containerColor = arcat.containerColour(),
             contentColor = arcat.onContainerColour()
         ),
-        shape = CutCornerShape(30),
+//        shape = CutCornerShape(30),
+        shape = MaterialTheme.shapes.large,
 
         modifier = modifier.wrapContentSize()
     ) {
@@ -69,11 +72,12 @@ fun GemIconButton(
 }
 
 
-@Preview(uiMode = Configuration.UI_MODE_TYPE_NORMAL)
+@Preview(uiMode = Configuration.UI_MODE_TYPE_NORMAL, showBackground = false, showSystemUi = false)
 @Composable
 fun PreviewGretchen() {
-    GemIconButton(
+    TellerTheme { GemIconButton(
         onClick = {},
         arcat = Arcat.GRETCHEN
-    )
+    ) }
+
 }
