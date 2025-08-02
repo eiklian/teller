@@ -3,6 +3,8 @@ package com.elianan.teller.ui.components
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -25,6 +27,8 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.elianan.teller.models.Arcat
@@ -53,18 +57,28 @@ fun GemIconButton(
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceEvenly,
-            modifier = Modifier.padding(16.dp)
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier
+//                .padding(24.dp)
                 .fillMaxSize()
         ) {
             Icon(
                 painterResource(arcat.iconId),
                 contentDescription = "",
-                Modifier.fillMaxSize(.8f)
+                Modifier.fillMaxWidth(.8f)
+                    .aspectRatio(1f)
+//                    .weight(30f)
+
             )
+            Spacer(modifier = Modifier.size(16.dp))
             Text(
                 stringResource(arcat.nameStringId),
-                fontStyle = Typography.titleMedium.fontStyle
+                style = MaterialTheme.typography.displaySmall,
+                fontSize = MaterialTheme.typography.titleLarge.fontSize,
+                overflow = TextOverflow.Visible,
+                textAlign = TextAlign.Center,
+//                fontStyle = Typography.titleMedium.fontStyle
+//                modifier = Modifier.weight(15f)
 
             )
         }

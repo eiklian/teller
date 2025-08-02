@@ -2,9 +2,13 @@ package com.elianan.teller.ui.layout
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -15,7 +19,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.elianan.teller.R
+import com.elianan.teller.ui.components.LoremIpsum
 import com.elianan.teller.ui.theme.TellerTheme
 import com.elianan.teller.ui.theme.Typography
 
@@ -40,25 +47,25 @@ fun HomePager(modifier: Modifier = Modifier) {
     ){
         TabRow (pagerState.currentPage
         ) {
-            TextButton (
-                onClick = { targetedTab = 0 }
-                ) {
-                Text("History",
-                    fontStyle = Typography.labelSmall.fontStyle
+            TabButton (
+                label = "History",
+                onClick = {
+                    if (targetedTab  == 0) {
+//                        TODO: scroll to top
+                    } else targetedTab = 0
+
+                }
                 )
-            }
 
-            TextButton(
+            TabButton(
+                label = "Log",
                 onClick = { targetedTab = 1}
-            ) {
-                Text("Log",
-                    fontStyle = Typography.labelSmall.fontStyle)
-            }
+            )
 
-            TextButton(
+            TabButton(
+                label = "Budget",
                 onClick = { targetedTab = 2 }
-            ) { Text("Budget",
-                fontStyle = Typography.labelSmall.fontStyle) }
+            )
 
         }
 
@@ -68,13 +75,14 @@ fun HomePager(modifier: Modifier = Modifier) {
         ) { page ->
             when(page){
                 0 -> {
-                    Text(
-                        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis pretium consectetur. Suspendisse sapien magna, tincidunt vel sagittis ac, pharetra eget erat. Nunc tempus volutpat purus, et ullamcorper orci ornare ut. Praesent consequat, orci nec elementum pretium, elit arcu vulputate ipsum, ac cursus nulla felis ut enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at ante facilisis, dapibus risus sed, lobortis mauris. Quisque id augue diam. Duis quis nulla eget mi hendrerit interdum. Sed hendrerit sollicitudin orci, sed molestie ligula bibendum non. Donec tortor nisl, vehicula eget lectus vitae, dictum bibendum elit.",
-                        fontStyle = Typography.headlineLarge.fontStyle
-                    )
+                    LoremIpsum()
                 }
-                1 -> {HomePage()}
-                2 -> {}
+                1 -> {
+                    HomePage()
+                }
+                2 -> {
+                    LoremIpsum()
+                }
             }
         }
     }
@@ -83,12 +91,22 @@ fun HomePager(modifier: Modifier = Modifier) {
 
 
 @Composable
-fun TabButton(modifier: Modifier = Modifier) {
+fun TabButton(
+    label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     TextButton(
-        onClick = {  },
+        onClick = onClick,
+        shape = MaterialTheme.shapes.extraSmall,
         modifier = Modifier,
     ) {
-        Text("Log")
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleMedium,
+//            fontStyle = Typography.labelMedium.fontStyle,
+//            fontFamily = Typography.headlineSmall.fontFamily
+        )
     }
     
 }

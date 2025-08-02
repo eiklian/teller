@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">Teller</string>
-    <string name="gretchen">gretchen</string>
-    <string name="gremlin">gremlin</string>
-    <string name="grebe">grebe</string>
-    <string name="grent">grent</string>
-    <string name="greld">greld</string>
+    <string name="app_name" translatable="false">Teller</string>
+    <string name="gretchen" translatable="false">gretchen</string>
+    <string name="gremlin" translatable="false">gremlin</string>
+    <string name="grebe" translatable="false">grebe</string>
+    <string name="grent" translatable="false">grent</string>
+    <string name="greld" translatable="false">greld</string>
+
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis pretium consectetur. Suspendisse sapien magna, tincidunt vel sagittis ac, pharetra eget erat. Nunc tempus volutpat purus, et ullamcorper orci ornare ut. Praesent consequat, orci nec elementum pretium, elit arcu vulputate ipsum, ac cursus nulla felis ut enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at ante facilisis, dapibus risus sed, lobortis mauris. Quisque id augue diam. Duis quis nulla eget mi hendrerit interdum. Sed hendrerit sollicitudin orci, sed molestie ligula bibendum non. Donec tortor nisl, vehicula eget lectus vitae, dictum bibendum elit.
+        \n
+Vivamus vitae consequat erat. Curabitur sapien urna, ornare nec dapibus at, ultrices eget tellus. Duis in nisi a ante lacinia varius. Sed consequat dolor sit amet rutrum aliquet. Donec mattis felis vel ipsum molestie fringilla. In hac habitasse platea dictumst. Aliquam luctus metus id pulvinar lacinia. Quisque sodales efficitur tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mi vitae enim gravida aliquam vitae sit amet risus. Proin pretium neque in ligula vulputate eleifend.
+\n \n
+Sed pharetra nibh egestas lectus tincidunt vehicula. Maecenas pharetra erat est, a tincidunt justo gravida quis. Quisque semper dictum imperdiet. Sed ultricies dictum elit. Quisque odio dolor, vulputate ac arcu non, blandit tempus lectus. Integer viverra posuere magna in congue. Fusce eu dictum risus. Aliquam eu hendrerit velit. Aliquam leo eros, laoreet posuere magna ut, dapibus laoreet augue. Etiam quis elit et tortor imperdiet commodo. Maecenas eu nibh tortor. Nunc ac posuere enim, eu pharetra enim. Aliquam iaculis, libero sed sodales elementum, velit urna bibendum augue, sit amet bibendum velit urna ac leo. Etiam sit amet sapien ac mauris suscipit euismod. In lacinia sit amet metus vitae feugiat.
+\n \n
+Phasellus at aliquam sapien. In in egestas est, a pharetra felis. Vestibulum eu vulputate libero. Suspendisse potenti. Quisque bibendum mauris ut velit feugiat, a dictum leo luctus. Sed malesuada quis libero ut viverra. Aliquam lacinia malesuada turpis quis bibendum. In hendrerit tempor libero et lobortis. Nullam viverra mi vel enim iaculis, non eleifend dolor fringilla. Ut aliquam ante nec nibh convallis, at malesuada mauris cursus. Vestibulum accumsan sagittis consequat. Curabitur a quam dapibus, pharetra mi eu, congue leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+\n \n
+Nullam tellus purus, faucibus id erat et, sodales congue nisi. Curabitur posuere varius commodo. Suspendisse ut dui massa. Ut eu nunc dolor. Sed viverra tellus et nulla fringilla, in convallis magna fringilla. Nulla augue ipsum, faucibus quis dictum nec, vestibulum vitae libero. Etiam quis enim vel dolor condimentum commodo. Vestibulum molestie risus orci, non dapibus massa facilisis vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisi diam, suscipit nec risus et, hendrerit imperdiet odio. Nullam mattis, turpis sit amet vehicula accumsan, ex urna commodo sem, in elementum erat sapien in diam.</string>
 </resources>

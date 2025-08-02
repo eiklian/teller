@@ -1,6 +1,7 @@
 package com.elianan.teller.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 
 import androidx.compose.ui.text.googlefonts.GoogleFont
@@ -9,28 +10,18 @@ import com.elianan.teller.R
 
 
 
-val provider = GoogleFont.Provider(
-    providerAuthority = "com.google.android.gms.fonts",
-    providerPackage = "com.google.android.gms",
-    certificates = R.array.com_google_android_gms_fonts_certs
-)
-
-val bodyFontFamily = FontFamily(
-    Font(
-        googleFont = GoogleFont("Quantico"),
-        fontProvider = provider,
-    )
-)
 
 val displayFontFamily = FontFamily(
-    Font(
-        googleFont = GoogleFont("Nova Square"),
-        fontProvider = provider,
-    )
+    Font(R.font.audiowide)
+)
+
+
+val bodyFontFamily = FontFamily(
+    Font(R.font.nova_square)
 )
 
 // Default Material 3 typography values
-val baseline = Typography()
+private val baseline = Typography()
 
 val Typography = Typography(
     displayLarge = baseline.displayLarge.copy(fontFamily = displayFontFamily),
