@@ -337,7 +337,7 @@ val unspecified_scheme = ColourFamily(
 fun TellerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColour: Boolean = true,
+    dynamicColour: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colourScheme = when {

@@ -2,6 +2,7 @@ package com.elianan.teller.ui.layout
 
 import android.R.attr.start
 import android.content.res.Configuration
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,6 +36,7 @@ import com.elianan.teller.ui.theme.Typography
 @Composable
 
 fun HomePage(
+    onArcatClick: (Arcat) -> Unit,
     modifier: Modifier = Modifier
 ) {
 
@@ -55,13 +57,13 @@ fun HomePage(
                 .weight(2f)
         ) {
             GemIconButton(
-                onClick = {},
+                onClick = {onArcatClick(Arcat.GRETCHEN)},
                 Arcat.GRETCHEN,
                 modifier = Modifier.weight(1f)
                     .padding(buttonPadding)
             )
             GemIconButton(
-                onClick = {},
+                onClick = {onArcatClick(Arcat.GREMLIN)},
                 Arcat.GREMLIN,
                 modifier = Modifier.weight(1f)
                     .padding(buttonPadding)
@@ -75,14 +77,14 @@ fun HomePage(
                 .weight(2f)
         ) {
             GemIconButton(
-                onClick = {},
+                onClick = {onArcatClick(Arcat.GREBE)},
                 Arcat.GREBE,
                 modifier = Modifier.weight(1f)
                     .padding(buttonPadding)
 
             )
             GemIconButton(
-                onClick = {},
+                onClick = {onArcatClick(Arcat.GRENT)},
                 Arcat.GRENT,
                 modifier = Modifier.weight(1f)
                     .padding(buttonPadding)
@@ -98,11 +100,12 @@ fun HomePage(
 
         ) {
             Card(
-                onClick = {},
+                onClick = {onArcatClick(Arcat.GRELD)},
                 colors = CardDefaults.cardColors(
                     containerColor = Arcat.GRELD.containerColour(),
                     contentColor = Arcat.GRELD.onContainerColour()
                 ),
+                border = BorderStroke(width = 16.dp, color = Arcat.GRELD.containerColour()),
 
                 modifier = modifier.fillMaxSize()
 
@@ -158,7 +161,9 @@ fun HomePage(
 @Composable
 private fun HomePagePreview() {
 
-    TellerTheme { HomePage() }
+    TellerTheme { HomePage(
+        onArcatClick = {}
+    ) }
 
 
 

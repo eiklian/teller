@@ -33,7 +33,7 @@ enum class Arcat(
     GREBE(R.string.grebe, R.drawable.sharp_savings_24,
         lapisLazuliFamilyLight, lapisLazuliFamilyDark
     ),
-    GRENT(R.string.grent, R.drawable.sharp_diamond_24,
+    GRENT(R.string.grent, R.drawable.sharp_account_balance_24,
         jasperFamilyLight, jasperFamilyDark
     ),
     GRELD(R.string.greld, R.drawable.sharp_money_bag_24,

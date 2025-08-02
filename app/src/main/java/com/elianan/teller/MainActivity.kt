@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.elianan.teller.ui.layout.HomePage
 import com.elianan.teller.ui.layout.HomePager
+import com.elianan.teller.ui.layout.MainScaffold
 import com.elianan.teller.ui.theme.TellerTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,12 +22,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TellerTheme {
-                Scaffold(
+                MainScaffold(
+                    onOptionsClick = {},
+                    onNavClick = {},
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
 
 
                     HomePager(
+                        onArcatClick = {},
+                        onHistoryItemClick = {},
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

@@ -1,6 +1,7 @@
 package com.elianan.teller.ui.components
 
 import android.content.res.Configuration
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,13 +11,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.CutCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Text
@@ -32,8 +29,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.elianan.teller.models.Arcat
-import com.elianan.teller.ui.theme.ColourFamily
-import com.elianan.teller.ui.theme.Purple40
 import com.elianan.teller.ui.theme.TellerTheme
 import com.elianan.teller.ui.theme.Typography
 
@@ -52,6 +47,7 @@ fun GemIconButton(
         ),
 //        shape = CutCornerShape(30),
         shape = MaterialTheme.shapes.large,
+        border = BorderStroke(width = 16.dp, color = arcat.containerColour()),
 
         modifier = modifier.wrapContentSize()
     ) {
@@ -86,12 +82,13 @@ fun GemIconButton(
 }
 
 
-@Preview(uiMode = Configuration.UI_MODE_TYPE_NORMAL, showBackground = false, showSystemUi = false)
+@Preview(uiMode = Configuration.UI_MODE_TYPE_NORMAL, showBackground = false, showSystemUi = true)
 @Composable
 fun PreviewGretchen() {
     TellerTheme { GemIconButton(
         onClick = {},
-        arcat = Arcat.GRETCHEN
+        arcat = Arcat.GRETCHEN,
+        modifier = Modifier.fillMaxSize(0.4f)
     ) }
 
 }
