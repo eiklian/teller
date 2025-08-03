@@ -11,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.elianan.teller.ui.layout.HomePage
 import com.elianan.teller.ui.layout.HomePager
 import com.elianan.teller.ui.layout.MainScaffold
+import com.elianan.teller.ui.nav.TellerHost
 import com.elianan.teller.ui.theme.TellerTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,11 +31,13 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
 
 
-                    HomePager(
-                        onArcatClick = {},
-                        onHistoryItemClick = {},
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    val navController = rememberNavController()
+
+
+                    TellerHost(navController, innerPadding)
+
+
+
                 }
 
 

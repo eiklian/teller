@@ -47,7 +47,7 @@ fun MainScaffold(
                 ),
                 navigationIcon = {
                     IconButton(
-                        onClick = onNavClick
+                        onClick = onNavClick,
                     ) {
                         Icon(
                             painterResource(R.drawable.sharp_diamond_24),

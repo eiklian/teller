@@ -1,17 +1,12 @@
 package com.elianan.teller.ui.layout
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -22,18 +17,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.room.util.copy
-import com.elianan.teller.R
-import com.elianan.teller.models.Arcat
-import com.elianan.teller.ui.components.GemFab
-import com.elianan.teller.ui.components.LoremIpsum
-import com.elianan.teller.ui.theme.Diamond
+import com.elianan.teller.data.models.Arcat
 import com.elianan.teller.ui.theme.TellerTheme
-import com.elianan.teller.ui.theme.Typography
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

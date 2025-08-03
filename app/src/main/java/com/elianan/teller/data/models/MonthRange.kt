@@ -1,4 +1,4 @@
-package com.elianan.teller.models
+package com.elianan.teller.data.models
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -6,12 +6,17 @@ import java.time.YearMonth
 import java.time.temporal.ChronoUnit
 
 data class MonthRange(
-    val rangeStart: YearMonth,
-    val rangeEnd: YearMonth
+    val start: YearMonth,
+    val end: YearMonth
 ) {
+
+
+
     @RequiresApi(Build.VERSION_CODES.O)
-    fun length(): Int {
-        return (rangeStart.until(rangeEnd, ChronoUnit.MONTHS) + 1L).toInt()
+    fun planLength(): Int {
+        return (start.until(end, ChronoUnit.MONTHS) + 1L).toInt()
+
     }
+
 
 }

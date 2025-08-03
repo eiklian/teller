@@ -4,8 +4,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 
+
     id("com.google.devtools.ksp")
     alias(libs.plugins.compose.compiler)
+
+
+    kotlin("plugin.serialization") version "2.1.0"
 }
 
 android {
@@ -90,4 +94,8 @@ dependencies {
 
 
     implementation(libs.androidx.navigation.compose)
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+
+
 }

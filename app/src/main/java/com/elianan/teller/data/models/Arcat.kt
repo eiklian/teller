@@ -1,4 +1,4 @@
-package com.elianan.teller.models
+package com.elianan.teller.data.models
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
